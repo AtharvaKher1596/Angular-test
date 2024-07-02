@@ -1,0 +1,62 @@
+<div class="form-container mt-4">
+  <h2 class="h2 text-center">Simple Form</h2>
+  <div class="container">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name" class="h6">Name:</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="name"
+          name="name"
+          class="form-control"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="h6">Email:</label>
+        <input
+          type="text"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          class="form-control"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="message" class="h6">Message:</label>
+        <textarea
+          rows="4" id="message"
+          [(ngModel)]="message"
+          name="message"
+          class="form-control"
+          required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success mt-4">Submit</button>
+    </form>
+<div class="mt-4" *ngIf="isSubmitted">
+<!--      <table class="table table-primary table-bordered caption-top">-->
+<!--        <caption>Form data in table</caption>-->
+<!--        <thead class="table-dark">-->
+<!--        <tr>-->
+<!--          <th>#</th>-->
+<!--          <th>Name</th>-->
+<!--          <th>Email</th>-->
+<!--          <th>Message</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr *ngFor="let info of information; let i = index">-->
+<!--          <td>{{i + 1}}</td>-->
+<!--          <td>{{ info.name }}</td>-->
+<!--          <td>{{ info.email }}</td>-->
+<!--          <td>{{ info.message }}</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </div>-->
+<!--  </div>-->
+  <div class="mt-4 d-flex flex-row justify-content-between flex-wrap">
+    <app-message-details></app-message-details>
+  </div>
+</div>
+</div>
